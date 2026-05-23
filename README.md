@@ -65,7 +65,7 @@ Un jeu de combat 2D inspiré de Super Smash Bros, avec des professeurs comme per
 | Normal | Autographe | Coup de stylo : 5 dégâts aux 2 ennemis les plus proches | 3s |
 | Magie 1 | Cou d'écou | Timbale : le prochain ennemi qui attaque dans la seconde est zombifié 3s | 20s |
 | Magie 2 | Impro | Le prochain ennemi qui bouge dans la seconde est confus 2s (+5 PV pour Giovanni) | 20s |
-| Ultime | Mambo Italiano | Hypnotise la moitié des ennemis 7s (ils marchent vers lui), immunité 7s. Si les hypnotisés n'infligent pas assez de dégâts : -60 PV + 2 malus | 100% barre |
+| Ultime | Mambo italiano | Hypnotise la moitié des ennemis 7s (ils marchent vers lui), immunité 7s. Si les hypnotisés n'infligent pas assez de dégâts : -60 PV + 2 malus | 100% barre |
 | 🔮 Spéciale | Famille royale du Bénin | Invoque un clone IA de Giovanni (50 PV, 15s) avec les mêmes attaques | Boule smash |
 
 **Faiblesse** : Clic-clic toutes les 45s — perd 35 PV + malus aléatoire.
@@ -141,23 +141,23 @@ Un jeu de combat 2D inspiré de Super Smash Bros, avec des professeurs comme per
 
 ## ⚡ Statuts
 
-| Icône | Statut | Effet |
-|---|---|---|
-| ? | Confus | Ne peut pas attaquer |
-| Zzz | Endormi | Immobile et ne peut pas attaquer |
-| ☠ | Empoisonné | Perd des PV en continu |
-| 🔥 | Feu | Perd des PV en continu (plus rapide que poison) |
-| 👁 | Aveugle | 50% de chance de rater une attaque |
-| 🐢 | Ralenti | Vitesse divisée par 2 |
-| ~ | Hypnotisé | Marche vers Giovanni |
-| 🧟 | Zombie | Marche en s'éloignant de la source |
-| ⚡ | Contrôle perdu | Mouvements aléatoires |
-| ↓ | Mauvaise note | Dégâts divisés par 2 |
-| ×3 | Dégâts triple | Dégâts multipliés par 2 (ultime JB) |
-| 🔇 | Sans attaque | Ne peut pas attaquer |
-| 🛡 | Bouclier | Dégâts reçus divisés par 2 |
-| ★ | Immunisé | Aucun dégât reçu |
-| 👻 | Invisible | Quasi-invisible (alpha 0.2) |
+| Icône | Statut         | Effet                                           |
+| -------| ----------------| -------------------------------------------------|
+| ?　　 | Confus         | Ne peut pas attaquer                            |
+| Zzz　 | Endormi        | Immobile et ne peut pas attaquer                |
+| ☠　　 | Empoisonné     | Perd des PV en continu                          |
+| 🔥　　| Feu            | Perd des PV en continu (plus rapide que poison) |
+| 👁　　| Aveugle        | 50% de chance de rater une attaque              |
+| 🐢　　| Ralenti        | Vitesse divisée par 2                           |
+| ~　　 | Hypnotisé      | Marche vers Giovanni                            |
+| 🧟　　| Zombie         | Marche en s'éloignant de la source              |
+| ⚡　　 | Contrôle perdu | Mouvements aléatoires                           |
+| ↓　　 | Mauvaise note  | Dégâts divisés par 2                            |
+| ×3　　| Dégâts triple  | Dégâts multipliés par 2 (ultime JB)             |
+| 🔇　　| Sans attaque   | Ne peut pas attaquer                            |
+| 🛡　　 | Bouclier       | Dégâts reçus divisés par 2                      |
+| ★　　 | Immunisé       | Aucun dégât reçu                                |
+| 👻　　| Invisible      | Quasi-invisible (alpha 0.2)                     |
 
 ---
 
@@ -168,7 +168,7 @@ game.html       — tout le jeu (HTML + CSS + JS inline)
 sspu_logo.png   — logo affiché dans l'intro
 ```
 
-## Legal Notice
+## Legal notice
 
 "Super Smash Profs. Ultimate" is an independent project inspired by the platform fighter genre.
 
