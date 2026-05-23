@@ -3,7 +3,7 @@
 Un jeu de combat 2D inspiré de Super Smash Bros, avec des professeurs comme personnages.  
 1 à 4 joueurs, 3 maps, objets, boule smash et attaques spéciales.
 
-**Jouer** : ouvrir `game.html` dans un navigateur. Aucune installation requise.
+**Jouer** : ouvrir `index.html` dans un navigateur. Aucune installation requise.
 
 ---
 
@@ -60,13 +60,13 @@ Un jeu de combat 2D inspiré de Super Smash Bros, avec des professeurs comme per
 ### Giovanni Zacari — Musique · Moyen · 3 sauts
 *Spécialité : contre-attaque, hypnose, musique*
 
-| Attaque | Nom | Effet | Cooldown |
-|---|---|---|---|
-| Normal | Autographe | Coup de stylo : 5 dégâts aux 2 ennemis les plus proches | 3s |
-| Magie 1 | Cou d'écou | Timbale : le prochain ennemi qui attaque dans la seconde est zombifié 3s | 20s |
-| Magie 2 | Impro | Le prochain ennemi qui bouge dans la seconde est confus 2s (+5 PV pour Giovanni) | 20s |
-| Ultime | Mambo italiano | Hypnotise la moitié des ennemis 7s (ils marchent vers lui), immunité 7s. Si les hypnotisés n'infligent pas assez de dégâts : -60 PV + 2 malus | 100% barre |
-| 🔮 Spéciale | Famille royale du Bénin | Invoque un clone IA de Giovanni (50 PV, 15s) avec les mêmes attaques | Boule smash |
+| Attaque　　 | Nom                     | Effet                                                                                                                                         | Cooldown    |
+| -------------| -------------------------| -----------------------------------------------------------------------------------------------------------------------------------------------| -------------|
+| Normal　　　| Autographe              | Coup de stylo : 5 dégâts aux 2 ennemis les plus proches                                                                                       | 3s          |
+| Magie 1　　 | Cou d'écou              | Timbale : le prochain ennemi qui attaque dans la seconde est zombifié 3s                                                                      | 20s         |
+| Magie 2　　 | Impro                   | Le prochain ennemi qui bouge dans la seconde est confus 2s (+5 PV pour Giovanni)                                                              | 20s         |
+| Ultime　　　| Mambo italiano          | Hypnotise la moitié des ennemis 7s (ils marchent vers lui), immunité 7s. Si les hypnotisés n'infligent pas assez de dégâts : -60 PV + 2 malus | 100% barre  |
+| 🔮 Spéciale | Famille royale du Bénin | Invoque un clone IA de Giovanni (50 PV, 15s) avec les mêmes attaques                                                                          | Boule smash |
 
 **Faiblesse** : Clic-clic toutes les 45s — perd 35 PV + malus aléatoire.
 
@@ -164,7 +164,7 @@ Un jeu de combat 2D inspiré de Super Smash Bros, avec des professeurs comme per
 ## 🗂️ Structure des fichiers
 
 ```
-game.html       — tout le jeu (HTML + CSS + JS inline)
+index.html       — tout le jeu (HTML + CSS + JS inline)
 sspu_logo.png   — logo affiché dans l'intro
 ```
 
