@@ -35,6 +35,7 @@ canvas{border:2px solid #444;display:block}
   <h2>Le combat des professeurs légendaires</h2>
   <button class="btn" onclick="showSel()">Jouer</button>
   <button class="btn sec" onclick="showCtrl()">Contrôles</button>
+  <button class="btn sec" onclick="location.href='editor.html'">🎨 Éditeur de sprites</button>
 </div>
 <div id="sel">
   <h2>Sélection des joueurs</h2>
@@ -165,7 +166,7 @@ canvas{border:2px solid #444;display:block}
       grad.addColorStop(0,'#fff');grad.addColorStop(0.4,'#f0c040');
       grad.addColorStop(0.7,'#ffd700');grad.addColorStop(1,'#e67e22');
       ctx.fillStyle=grad;
-      ctx.fillText('SSPU',cx,cy);
+      ctx.fillText('Super Smash Profs. Ultimate',cx,cy);
     }
     ctx.restore();
   }
@@ -210,6 +211,21 @@ canvas{border:2px solid #444;display:block}
 // ============================================================
 // STATUTS
 // ============================================================
+
+// Charge les sprites custom depuis localStorage
+window._customSprites = {};
+(function(){
+  try {
+    const raw = localStorage.getItem('sspu_sprites');
+    if(!raw) return;
+    const data = JSON.parse(raw);
+    Object.entries(data).forEach(([charId, info]) => {
+      const img = new Image();
+      img.src = info.dataURL;
+      window._customSprites[charId] = { img, w: info.w, h: info.h };
+    });
+  } catch(e) { console.warn('Sprites custom non chargés:', e); }
+})();
 const ST = {
   CONFUS:'confus', ENDORMI:'endormi', EMPOISONNE:'empoisonne', FEU:'feu',
   AVEUGLE:'aveugle', RALENTI:'ralenti', HYPNOTISE:'hypnotise',
@@ -372,6 +388,13 @@ class Player {
     ctx.globalAlpha=this.hasStatus(ST.INVISIBLE)?.2:1;
     const cx=this.x+this.width/2, cy=this.y, w=this.width, h=this.height;
     const id=this.charDef.id;
+
+    // ---- Sprite custom (éditeur) ----
+    const customSprite=window._customSprites&&window._customSprites[id];
+    if(customSprite&&customSprite.img){
+      const sw=customSprite.w||w, sh=customSprite.h||h;
+      ctx.drawImage(customSprite.img, this.x+(w-sw)/2, this.y+(h-sh)/2, sw, sh);
+    } else {
 
     // ---- Corps selon personnage ----
     if(id==='sunday'){
@@ -592,6 +615,7 @@ class Player {
       ctx.fillRect(cx-9,cy+h*0.82,7,h*0.18);
       ctx.fillRect(cx+2,cy+h*0.82,7,h*0.18);
     }
+    } // fin du else sprite custom
 
     // ---- Overlays statuts ----
     if(this.hasStatus(ST.CONFUS)){ctx.fillStyle='rgba(241,196,15,.25)';ctx.fillRect(this.x,this.y,w,h);}
@@ -831,7 +855,7 @@ function sundaySelf(p,game){p.ultimateBar=0;p.charDef.attacks.forEach(a=>{p.cool
 
 // --- GIOVANNI ---
 const GiovanniDef = {
-  id:'giovanni', name:'Giovanni Zacari', speed:180, maxJumps:3,
+  id:'giovanni', name:"Giovanni Ntia Nkoué", speed:180, maxJumps:3,
   attacks:[
     {id:'normal',  name:'Autographe',         type:'normal',  cooldown:3, ultimePct:0},
     {id:'magic1',  name:"Cou d'écou",          type:'magic',   cooldown:20,ultimePct:15},
@@ -1231,7 +1255,7 @@ const CHAR_DEFS={isaure:IsaureDef,sunday:SundayDef,giovanni:GiovanniDef,djamila:
 const CHARS=[
   {id:'isaure',    name:'Isaure Fernandes',    sub:'Maths • Rapide • 3 sauts'},
   {id:'sunday',    name:'Sunday Oladeji',       sub:'Techno • Lent • 1 saut'},
-  {id:'giovanni',  name:'Giovanni Zacari',      sub:'Musique • Moyen • 3 sauts'},
+  {id:'giovanni',  name:"Giovanni Ntia Nkoué",      sub:'Musique • Moyen • 3 sauts'},
   {id:'djamila',   name:'Djamila Chung',        sub:'Anglais • Moyen • 2 sauts'},
   {id:'jeanbaptiste',name:'Jean-Baptiste Langlois',sub:'SVT • Rapide • 4 sauts'},
   {id:'milan',     name:'Milan Mandic',          sub:'Maths • Lent • 3 sauts • 🚀'},

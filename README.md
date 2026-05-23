@@ -57,7 +57,7 @@ Un jeu de combat 2D inspiré de Super Smash Bros, avec des professeurs comme per
 
 ---
 
-### Giovanni Zacari — Musique · Moyen · 3 sauts
+### Giovanni N'Tia N'Koué — Musique · Moyen · 3 sauts
 *Spécialité : contre-attaque, hypnose, musique*
 
 | Attaque　　 | Nom                     | Effet                                                                                                                                         | Cooldown    |
@@ -160,11 +160,18 @@ Un jeu de combat 2D inspiré de Super Smash Bros, avec des professeurs comme per
 | 👻　　| Invisible      | Quasi-invisible (alpha 0.2)                     |
 
 ---
-
+## Editeur de sprites
+- Possibilité de modifier les sprites des personnages (éditeur pixel art ou vectoriel)
+- Outils multiples
+- Infinité de couleurs
+- Preview
+- Sauvegarde via import et export des fichiers
+- 
 ## 🗂️ Structure des fichiers
 
 ```
 index.html       — tout le jeu (HTML + CSS + JS inline)
+editor.html     — éditeur de sprites
 sspu_logo.png   — logo affiché dans l'intro
 ```
 
